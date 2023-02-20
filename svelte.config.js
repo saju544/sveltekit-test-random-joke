@@ -1,9 +1,10 @@
-import adapter from '@sveltejs/adapter-cloudflare'
+import cloudflare from '@sveltejs/adapter-cloudflare';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter()
+		adapter: cloudflare(),
+		target: '#svelte'
 	}
 };
 
