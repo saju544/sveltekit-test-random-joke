@@ -2,6 +2,7 @@
 	let joke;
 
 	async function getJoke() {
+		joke = null;
 		const jokeResponse = await fetch('/api/joke');
 		joke = (await jokeResponse.json()).value;
 	}
@@ -13,4 +14,6 @@
 
 {#if joke}
 	<h2>{joke}</h2>
+{:else}
+	<h2>Loading...</h2>
 {/if}
