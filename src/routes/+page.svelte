@@ -1,5 +1,5 @@
 <script>
-	let joke;
+	let joke = '';
 
 	async function getJoke() {
 		joke = null;
